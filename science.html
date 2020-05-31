@@ -1,0 +1,69 @@
+<link href="assignments.html" />
+<html>
+  <h3>Name the organelles (enter the singular form only, with all lower-case letters)</h3>
+<ol>
+  <li> A clear, jellylike substance that holds the cell's organelles. </li>
+  <input type="text" id="ans1" placeholder="Enter answer" name="ans" >
+  <li> A protective layer around the cell that controls what enters and leaves the cell. </li>
+  <input type="text" id="ans2" placeholder="Enter answer" name="ans" >
+  <li> Directs the cell's activities. </li>
+  <input type="text" id="ans3" placeholder="Enter answer" name="ans" >
+  <li> Tiny organelle that makes proteins in the cell. </li>
+  <input type="text" id="ans4" placeholder="Enter answer" name="ans" >
+  <li> Makes hormones and lipids in the cell. </li>
+  <input type="text" id="ans5" placeholder="Enter answer" name="ans" >
+  <li> Processes and bundles proteins and lipids in the cell. </li>
+  <input type="text" id="ans6" placeholder="Enter answer" name="ans" >
+  <li> Contains digestive enzymes and breaks down cellular waste. </li>
+  <input type="text" id="ans7" placeholder="Enter answer" name="ans" >
+
+
+</ol>
+<button onclick="sciencesubmit()"><h4>Submit</h4></button>
+
+
+<h3 id="scorescience"></h3>
+
+<button onclick = "completed()"><a  href="assignments.html"><h3>Return to assignments</h3></a></button>
+</html>
+
+<script>
+  
+  function completed() {
+    document.getElementById("complete").innerHTML = "Done!";
+  }
+
+  function sciencesubmit() {
+    var ans1 = document.getElementById("ans1").value;
+    var ans2 = document.getElementById("ans2").value;
+    var ans3 = document.getElementById("ans3").value;
+    var ans4 = document.getElementById("ans4").value;
+    var ans5 = document.getElementById("ans5").value;
+    var ans6 = document.getElementById("ans6").value;
+    var ans7 = document.getElementById("ans7").value;
+    var correct = 0;
+    if (ans1 == "cytoplasm") {
+      correct += 1;
+    }
+    if (ans2 == "cell membrane") {
+      correct += 1;
+    }
+    if (ans3 == "nucleus") {
+      correct += 1;
+    }
+    if (ans4 == "ribosome") {
+      correct += 1;
+    }
+    if (ans5 == "smooth endoplasmic reticulum") {
+      correct += 1;
+    }
+    if (ans6 == "golgi apparatus") {
+      correct += 1;
+    }
+    if (ans7 == "lysosome") {
+      correct += 1;
+    }
+
+    document.getElementById("scorescience").innerHTML = "You got " + correct + " questions correct.";
+  }
+</script>
