@@ -1,0 +1,92 @@
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<style>
+#navbarr {
+  overflow: hidden;
+  background-color: lightgreen;
+  padding: 50px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+#navbarr #logo {
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+#navbarr a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+button {
+  background: yellow;
+  width: 180px;
+  height: 100px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+#navbarr-right {
+  float: left;
+}
+</style>
+
+<div id="navbarr">
+
+  <a href="#default" id="logo">Contact Me</a>
+
+<div id="navbar-right">
+  <button id="x" onclick><a class="active"  href="index.html"><h2>Home</h2></a></button>
+
+  <button id="y" onclick><a class="active"  href="register.html"><h2>Sign Up!</h2></a></button>
+  </div>
+  
+</div>
+
+<form action="mailto:dhruvsuresh2004@gmail.com" method="POST" onsubmit="return mail()">
+<div style="margin-top:320px;padding:15px 15px 2500px;font-size:16px">
+  <label for="firstname"><b>First Name</b></label>
+    <input type="text" id="fname" placeholder="Enter first name" name="firstname" >
+  <label for="email"><b>Email</b></label>
+    <input type="text" id="email" placeholder="Enter your Email" name="email" >
+  <label for="message"><b>Your message</b></label>
+    <input type="text" id="message" placeholder="Enter Message" name="message" >
+  <input type="submit" value="Submit">
+  
+</div>
+</form>
+
+
+<script>
+
+</script>
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 92 || document.documentElement.scrollTop > 92) {
+    document.getElementById("navbarr").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("x").style.width = "185px";
+    document.getElementById("x").style.height = "75px";
+    document.getElementById("y").style.width = "185px";
+    document.getElementById("y").style.height = "75px";
+  } else {
+    document.getElementById("navbarr").style.padding = "70px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("x").style.width = "200px";
+    document.getElementById("x").style.height = "100px";
+    document.getElementById("y").style.width = "200px";
+    document.getElementById("y").style.height = "100px";
+  }
+}
+</script>
