@@ -1,0 +1,123 @@
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+#navbarr3 {
+  overflow: hidden;
+  background-color: lightgreen;
+  padding: 50px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+#navbarr3 #logo {
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+#navbarr3 a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+button {
+  background: yellow;
+  width: 180px;
+  height: 100px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+#navbarr3-right {
+  float: left;
+}
+</style>
+
+<div id="navbarr3">
+
+  <a href="#default" id="logo">COVID-19</a>
+
+<div id="navbar-right">
+  <button id="home" onclick><a class="active"  href="index.html"><h2>Home</h2></a></button>
+
+  <button id="signupbtn" onclick><a class="active"  href="register.html"><h2>Sign Up!</h2></a></button>
+  </div>
+  
+</div>
+
+<div style="margin-top:315px;padding:15px 15px 2500px;font-size:16px">
+
+<h2> As an educational website, why not learn a bit about the reason that inspired this website - COVID-19? </h2>
+
+<h4> What is it? </h4>
+
+<ul>
+  <li> COVID-19 is caused by a coronavirus called SARS-CoV-2 </li>
+  <li> It's similar to SARs-CoV and other coronaviruses, but has many mutations </li>
+  <li> In humans, they can cause mild to severe repiratory infections </li>
+</ul>
+
+<h4> Symptoms </h4>
+<ul>
+  <li> Incubation period is about 4-5 days (but could range from 2-14 days) </li>
+  <li> Symptoms may include fever, cough, breathing difficulties, fatigue, aches, headaches, diarrhea, nausea, or sore throat </li>
+  <li> Older people or those with underlying conditions like heart disease, lung disease, or diabetes, tend to be at higher risk to Covid-19 </li>
+</ul>
+
+<h4> Spread </h4>
+
+<ul>
+  <li> Virus spreads mainly from person to person (which is why 6 feet of social distancing is encouraged or mandated) </li>
+  <li> Can spread through respiratory droplets (talking, coughing, sneezing) </li>
+  <li> Virus could be on surfaces and can spread to a person upon touch </li>
+  <li> Some people may not show symptoms and still spread it </li>
+</ul>
+
+<h4> Science behind Covid-19 infection </h4>
+<ul>
+  <li> Long, spiky proteins on virus' surface bind to our cells' ACE2 protein </li>
+  <li> The virus and the cell then crash, allowing the virus' genetic material to enter the cell </li>
+  <li> Then, it uses our cell like a factory and multiplies, eventually infecting many other cells, causing the infection </li>
+</ul>
+
+<h4> Precautions </h4>
+
+<ul>
+  <li> Minimum of 6 feet social distancing between people </li>
+  <li> Wear masks when you are outside </li>
+  <li> Wash your hands often </li>
+  <li> Disinfect commonly touched surfaces </li>
+</ul>
+
+<img src="coronavirus.jpg" alt="Coronavirus" height="150" width="220">
+
+
+</div>
+
+<script>
+// When the user scrolls down 92px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 92 || document.documentElement.scrollTop > 92) {
+    document.getElementById("navbarr3").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("home").style.width = "185px";
+    document.getElementById("home").style.height = "75px";
+    document.getElementById("signupbtn").style.width = "185px";
+    document.getElementById("signupbtn").style.height = "75px";
+  } else {
+    document.getElementById("navbarr3").style.padding = "70px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("home").style.width = "200px";
+    document.getElementById("home").style.height = "100px";
+    document.getElementById("signupbtn").style.width = "200px";
+    document.getElementById("signupbtn").style.height = "100px";
+  }
+}
+</script>
