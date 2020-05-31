@@ -1,0 +1,54 @@
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<style>
+h1 {text-align: center;}
+
+</style>
+
+
+
+
+<h1 id="demo">Points Today: 1000</h1>
+
+<h2> Current Avatar: Rabbit </h2>
+<img src="Cartoon-rabbit-vector.jpg" alt="Rabbit" height="150" width="150">
+<ul>
+  <li> Next Avatar: Cheetah (achieved upon reaching 15000 points!) </li>
+</ul>
+<img src="cartoon-cheetah-running_29190-774.jpg" alt="Cheetah" height="75" width="75">
+
+<h2>Claim your points once you have completed each of your tasks! Click "claim overall reward" to see the total points you earned! (shown at top of page once claimed)</h2>
+
+
+
+
+
+
+<button onclick="onClick()"><h3>Click me for each assignment/activity you completed today. +1000 points</h3></button>
+<button onclick="myFunction()"><h3>Claim Overall Reward</h3></button>
+
+<script>
+  
+  var clicks = 0;
+  
+  function onClick() {
+        
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+  };
+  clicks = clicks;
+function myFunction() {
+
+  var points = document.getElementById("demo");
+  points = 1000;
+
+  alert("Good work on completing your tasks! You earned 1000 points for each task! Come back for more!");
+
+  document.getElementById("demo").innerHTML = "Points Today:  " + (1000 * (clicks+1));
+}
+
+</script>
+
+
+
+<button onclick><a href="register-confirm.html"><h2>Homepage</h2></a></button>
