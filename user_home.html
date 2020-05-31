@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  
+
+<style>
+button {
+  background: lightgreen;
+  width: 200px;
+  height: 150px;
+  margin: 8px 0;
+}
+
+
+
+#homebar {
+  overflow: hidden;
+  background-color: red;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#homebar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#homebar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#homebar-right {
+  float: right;
+}
+
+</style>
+
+<body>
+
+
+<link href="register.html" />
+<script type="text/javascript" src="script.js"></script>
+
+<div id="homebar">
+  <a href="#default" id="logo">Your Homepage</a>
+  <div id="homebar-right">
+    <button id="assignments" onclick><a        href="assignments.html" ><h4>Assignments</h4></a></button>
+
+    <button id="schedule" onclick><a        href="quarantine-schedule.html" ><h4> Scheduler</h4></a></button>
+
+    <button id="resources" onclick><a        href="resources.html" ><h4>Resources</h4></a></button>
+    
+    <button id="email" onclick><a        href="email.html" ><h4>Email a teacher</h4></a></button>
+
+    <button id="rewards" onclick><a        href="rewards.html" ><h4>Rewards</h4></a></button>
+  </div>
+</div>
+
+<div style="margin-top:330px;padding:15px 15px 2500px;font-size:30px">
+<h4> Welcome to your homepage! You can view your assignments for today, create your weekly schedule to keep on track (add your assignments to it too!), access additional resources provided by us, email your teacher (or anyone you need), and get rewards! </h4>
+
+<button onclick><a        href="index.html"><h3>Log Out</h3></a></button>
+
+</div>
+
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+    document.getElementById("homebar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("assignments").style.width = "150px";
+    document.getElementById("assignments").style.height = "75px";
+    document.getElementById("schedule").style.width = "175px";
+    document.getElementById("schedule").style.height = "75px";
+    document.getElementById("resources").style.width = "175px";
+    document.getElementById("resources").style.height = "75px";
+    document.getElementById("email").style.width = "175px";
+    document.getElementById("email").style.height = "75px";
+    document.getElementById("rewards").style.width = "175px";
+    document.getElementById("rewards").style.height = "75px";
+  } else {
+    document.getElementById("homebar").style.padding = "70px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("assignments").style.width = "175px";
+    document.getElementById("assignments").style.height = "140px";
+    document.getElementById("schedule").style.width = "175px";
+    document.getElementById("schedule").style.height = "140px";
+    document.getElementById("resources").style.width = "175px";
+    document.getElementById("resources").style.height = "140px";
+    document.getElementById("email").style.width = "175px";
+    document.getElementById("email").style.height = "140px";
+    document.getElementById("rewards").style.width = "175px";
+    document.getElementById("rewards").style.height = "140px";
+  }
+}
+</script>
+
+
+</body>
+</html>
