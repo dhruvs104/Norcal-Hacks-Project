@@ -1,0 +1,68 @@
+<link href="assignments.html" />
+<html>
+<ol>
+  <li> 9 + 18 = __ ? </li>
+  <input type="text" id="ans1" placeholder="Enter a number" name="ans" >
+  <li> 28 + 36 = __ ? </li>
+  <input type="text" id="ans2" placeholder="Enter a number" name="ans" >
+  <li> 5 + 13 = __ ? </li>
+  <input type="text" id="ans3" placeholder="Enter a number" name="ans" >
+  <li> 57 + 36 = __ ? </li>
+  <input type="text" id="ans4" placeholder="Enter a number" name="ans" >
+  <li> 17 + 19 = __ ? </li>
+  <input type="text" id="ans5" placeholder="Enter a number" name="ans" >
+  <li> 44 + 55 = __ ? </li>
+  <input type="text" id="ans6" placeholder="Enter a number" name="ans" >
+  <li> 3 + 38 = __ ? </li>
+  <input type="text" id="ans7" placeholder="Enter a number" name="ans" >
+
+
+</ol>
+<button onclick="mathsubmit()"><h4>Submit</h4></button>
+
+
+<h3 id="scoremath"></h3>
+
+<button onclick = "completed()"><a  href="assignments.html"><h3>Return to assignments</h3></a></button>
+</html>
+
+<script>
+  
+  function completed() {
+    document.getElementById("complete").innerHTML = "Done!";
+  }
+
+  function mathsubmit() {
+    var ans1 = document.getElementById("ans1").value;
+    var ans2 = document.getElementById("ans2").value;
+    var ans3 = document.getElementById("ans3").value;
+    var ans4 = document.getElementById("ans4").value;
+    var ans5 = document.getElementById("ans5").value;
+    var ans6 = document.getElementById("ans6").value;
+    var ans7 = document.getElementById("ans7").value;
+    var correct = 0;
+    if (ans1 == 27) {
+      correct += 1;
+    }
+    if (ans2 == 64) {
+      correct += 1;
+    }
+    if (ans3 == 18) {
+      correct += 1;
+    }
+    if (ans4 == 93) {
+      correct += 1;
+    }
+    if (ans5 == 36) {
+      correct += 1;
+    }
+    if (ans6 == 99) {
+      correct += 1;
+    }
+    if (ans7 == 41) {
+      correct += 1;
+    }
+
+    document.getElementById("scoremath").innerHTML = "You got " + correct + " questions correct.";
+  }
+</script>
